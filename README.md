@@ -126,7 +126,6 @@ This modelling approach extends naturally to several **AI-driven R&D domains**:
 | `xy_data.csv` | Input dataset. |
 | `fitted_results.json` | Computed parameters and metrics. |
 | `fitted_curve.png` | Visualization of the fitted model. |
-| `FLAM_R&D_Report.pdf` | Written summary report. |
 | `README.md` | This documentation file. |
 | `assets/*.svg` | Rendered equation images for GitHub readability. |
 
