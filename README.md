@@ -1,4 +1,4 @@
-# FLAM R&D/AI Assignment
+# FLAM R&D / AI Assignment
 
 > **Objective:**  
 > Estimate the parameters (θ, M, X) of a nonlinear parametric curve from observed (x, y) points  
@@ -8,7 +8,7 @@
 
 ## Problem Definition
 
-The dataset `xy_data.csv` contains coordinates that lie on a parametric curve defined by:
+The dataset [`xy_data.csv`](./xy_data.csv) contains coordinates that lie on a parametric curve defined by:
 
 **Parametric Equations:**
 <p align="center" style="background-color:#fff0f0;padding:10px;border-radius:10px;display:inline-block;">
@@ -34,12 +34,15 @@ The optimization minimizes the total squared distance between the observed and p
 
 | Step | Description |
 |------|--------------|
-| **1. Load Data** | Read `xy_data.csv` (observed x–y pairs). |
-| **2. Define Model** | Implement the parametric equations for x(t) and y(t). |
+| **1. Load Data** | Read [`xy_data.csv`](./xy_data.csv) containing observed x–y pairs. |
+| **2. Define Model** | Implemented the parametric equations for x(t) and y(t). |
 | **3. Initial Guesses** | θ₀ = 0.52 rad ≈ 29.8°, M₀ = 0.036, X₀ = 54.5; t₀ ∈ [6, 60]. |
-| **4. Optimization** | Use `scipy.optimize.least_squares` with parameter bounds. |
-| **5. Evaluation** | Compute RMSE, R², and L₁ (Manhattan) metrics for validation. |
-| **6. Visualization** | Plot observed points, fitted curve, and predicted t-values. |
+| **4. Optimization** | Used `scipy.optimize.least_squares` with parameter bounds. |
+| **5. Evaluation** | Computed RMSE, R², and L₁ (Manhattan) metrics for validation. |
+| **6. Visualization** | Plotted observed points, fitted curve, and predicted t-values. |
+
+**Notebook:**  
+[`Flam_R&D_CurveFitting.ipynb`](./Flam_R&D_CurveFitting.ipynb) — contains complete implementation and analysis.  
 
 ### Tech Stack
 Python 3 · NumPy · Pandas · SciPy · Matplotlib  
@@ -50,7 +53,7 @@ Environment: Google Colab
 ## Results
 
 <p align="center">
-  <img src="assets/eq_result.png"/>
+  <img src="assets/eq_result.png" alt="Result summary equation"/>
 </p>
 
 | Parameter | Symbol | Value |
@@ -62,9 +65,10 @@ Environment: Google Colab
 | **R²** |  | 1.00 |
 | **L₁ (mean)** |  | 2.65 × 10⁻⁶ |
 
+**Results File:** [`fitted_results.json`](./fitted_results.json)
+
 **Interpretation:**  
-All error metrics (RMSE, R², and L₁) confirm near-perfect reconstruction within floating-point precision limits.  
-This demonstrates that the fitted parameters exactly reproduce the original curve.
+All error metrics (RMSE, R², and L₁) confirm near-perfect reconstruction within floating-point precision limits. This demonstrates that the fitted parameters precisely reproduce the original curve.
 
 ---
 
@@ -95,21 +99,21 @@ This demonstrates that the fitted parameters exactly reproduce the original curv
 
 | Parameter | Symbol | Value | Interpretation |
 |------------|---------|--------|----------------|
-| Angle | θ | *≈ 29.9°* | Defines the overall curve orientation. |
-| Exponential Modulation | M | *≈ 0.029* | Controls the sinusoidal envelope of the curve. |
-| Horizontal Offset | X | *≈ 54.9* | Shifts curve horizontally along the x-axis. |
+| Angle | θ | *≈ 29.9°* | Defines overall curve orientation. |
+| Exponential Modulation | M | *≈ 0.029* | Controls the sinusoidal envelope. |
+| Horizontal Offset | X | *≈ 54.9* | Shifts curve horizontally. |
 | Fit Metric | RMSE | *1.909 × 10⁻⁶* | Near-zero error — almost perfect fit. |
 | Correlation | R² | *1.00000* | Explains 100% of variance — complete reconstruction. |
-| Absolute Error | L₁ (mean) | *2.65 × 10⁻⁶* | Average absolute coordinate deviation — confirms geometric fidelity. |
+| Absolute Error | L₁ (mean) | *2.65 × 10⁻⁶* | Mean absolute deviation — confirms geometric fidelity. |
 
 **Result:**  
 The optimized model reproduces the dataset within machine precision, confirming that the data points originate from the same parametric function.
 
 ---
 
-## **Discussion and Applications**
+## Discussion and Applications
 
-This modelling approach extends naturally to several **AI-driven R&D domains**:
+This modeling approach extends naturally to several **AI-driven R&D domains**:
 
 - **Mixed Reality Calibration:** Aligning virtual and real-world coordinate spaces.  
 - **Gesture Trajectory Fitting:** Smooth curve reconstruction for immersive AR/VR interactions.  
@@ -122,18 +126,18 @@ This modelling approach extends naturally to several **AI-driven R&D domains**:
 
 | File | Description |
 |------|-------------|
-| `Flam_R&D_CurveFitting.ipynb` | Main Colab notebook (implementation & analysis). |
-| `xy_data.csv` | Input dataset. |
-| `fitted_results.json` | Computed parameters and metrics. |
-| `fitted_curve.png` | Visualization of the fitted model. |
-| `README.md` | This documentation file. |
-| `assets/*.svg` | Rendered equation images for GitHub readability. |
+| [`Flam_R&D_CurveFitting.ipynb`](./Flam_R&D_CurveFitting.ipynb) | Main Colab notebook (implementation & analysis). |
+| [`xy_data.csv`](./xy_data.csv) | Input dataset. |
+| [`fitted_results.json`](./fitted_results.json) | Computed parameters and metrics. |
+| [`fitted_curve.png`](./fitted_curve.png) | Visualization of the fitted model. |
+| [`README.md`](./README.md) | This documentation file. |
+| [`assets/*.svg`](./assets/) | Rendered equation images for GitHub readability. |
 
 ---
 
-## Submitted by:
+## Submitted by
 
-**Name:** *Sayanrup Barman*   
-**Scholar ID:** 2215060 
+**Name:** *Sayanrup Barman*  
+**Scholar ID:** 2215060  
 **College:** NIT Silchar  
-**Date:** November 2025 
+**Date:** November 2025  
