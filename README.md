@@ -1,4 +1,4 @@
-# FLAM R&D — Parametric Curve Fitting Assignment
+# FLAM R&D/AI Assignment
 
 > **Objective:**  
 > Estimate the parameters (θ, M, X) of a nonlinear parametric curve from observed (x, y) points  
@@ -8,10 +8,10 @@
 
 ## Problem Definition
 
-The dataset `xy_data.csv` contains coordinates that lie on a parametric curve defined as:
+The dataset `xy_data.csv` contains coordinates that lie on a parametric curve defined by:
 
 **Parametric Equations:**
-<p align="center">
+<p align="center" style="background-color:#fff0f0;padding:10px;border-radius:10px;display:inline-block;">
   <img src="assets/eq_x_t.svg" alt="x(t) equation" width="420"/>
   <br>
   <img src="assets/eq_y_t.svg" alt="y(t) equation" width="420"/>
@@ -21,10 +21,10 @@ The dataset `xy_data.csv` contains coordinates that lie on a parametric curve de
 **Parameter Ranges:**  
 0° ≤ θ ≤ 50°, −0.05 ≤ M ≤ 0.05, 0 ≤ X ≤ 100, 6 ≤ t ≤ 60  
 
-The optimization aims to minimize the total squared difference between observed and predicted coordinates.
+The optimization minimizes the total squared distance between the observed and predicted coordinates.
 
 **Optimization Objective:**
-<p align="center">
+<p align="center" style="background-color:#fff0f0;padding:10px;border-radius:10px;display:inline-block;">
   <img src="assets/eq_objective.svg" alt="Optimization objective" width="500"/>
 </p>
 
@@ -49,7 +49,9 @@ Environment: Google Colab
 
 ## Results
 
-<img src="assets/eq_result.png"/>
+<p align="center">
+  <img src="assets/eq_result.png"/>
+</p>
 
 | Parameter | Symbol | Value |
 |------------|---------|--------|
@@ -57,7 +59,7 @@ Environment: Google Colab
 | Exponential Modulation | M | 0.029 |
 | Horizontal Offset | X | 54.9 |
 | **RMSE** |  | 1.909 × 10⁻⁶ |
-| **R²** |  | 1 |
+| **R²** |  | 1.00 |
 | **L₁ (mean)** |  | 2.65 × 10⁻⁶ |
 
 **Interpretation:**  
@@ -73,8 +75,8 @@ This demonstrates that the fitted parameters exactly reproduce the original curv
 </p>
 
 **Legend:**  
-- 🔵 Observed Data    
-- 🔴 Fitted Curve    
+- 🔵 Observed Data  
+- 🔴 Fitted Curve  
 - ✖️ Predicted (tᵢ) Points  
 
 ---
@@ -83,18 +85,36 @@ This demonstrates that the fitted parameters exactly reproduce the original curv
 
 | Metric | Formula | Interpretation |
 |---------|----------|----------------|
-| **RMSE (2D)** | <img src="assets/eq_rmse.svg" width="340"/> | Average Euclidean error per coordinate (lower = better). |
-| **R² (combined)** | <img src="assets/eq_r2.svg" width="340"/> | Fraction of total variance explained (closer to 1 = better). |
-| **L₁ (Manhattan)** | <img src="assets/eq_l1.svg" width="340"/> | Average absolute distance between predicted and true points (unit-consistent and less sensitive to outliers). |
+| **RMSE (2D)** | <p style="background-color:#fff0f0;padding:6px;border-radius:8px;display:inline-block;"><img src="assets/eq_rmse.svg" width="320"/></p> | Average Euclidean error per coordinate (lower = better). |
+| **R² (combined)** | <p style="background-color:#fff0f0;padding:6px;border-radius:8px;display:inline-block;"><img src="assets/eq_r2.svg" width="320"/></p> | Fraction of total variance explained (closer to 1 = better). |
+| **L₁ (Manhattan)** | <p style="background-color:#fff0f0;padding:6px;border-radius:8px;display:inline-block;"><img src="assets/eq_l1.svg" width="320"/></p> | Average absolute distance between predicted and true points (unit-consistent and less sensitive to outliers). |
 
 ---
 
-This work exemplifies **AI-based mathematical modeling** — essential for tasks such as:
+## **Summary of Results**
 
-- **Mixed Reality Calibration:** Aligning digital and physical spatial mappings.  
-- **Gesture and Motion Reconstruction:** Smooth trajectory modeling for interactive AR experiences.  
-- **3D Path Estimation:** Predicting motion paths from sparse spatial data.  
-- **Generative AI Geometry:** Data-driven curve and surface parameterization.
+| Parameter | Symbol | Value | Interpretation |
+|------------|---------|--------|----------------|
+| Angle | θ | *≈ 29.9°* | Defines the overall curve orientation. |
+| Exponential Modulation | M | *≈ 0.029* | Controls the sinusoidal envelope of the curve. |
+| Horizontal Offset | X | *≈ 54.9* | Shifts curve horizontally along the x-axis. |
+| Fit Metric | RMSE | *1.909 × 10⁻⁶* | Near-zero error — almost perfect fit. |
+| Correlation | R² | *1.00000* | Explains 100% of variance — complete reconstruction. |
+| Absolute Error | L₁ (mean) | *2.65 × 10⁻⁶* | Average absolute coordinate deviation — confirms geometric fidelity. |
+
+**Result:**  
+The optimized model reproduces the dataset within machine precision, confirming that the data points originate from the same parametric function.
+
+---
+
+## **Discussion and Applications**
+
+This modelling approach extends naturally to several **AI-driven R&D domains**:
+
+- **Mixed Reality Calibration:** Aligning virtual and real-world coordinate spaces.  
+- **Gesture Trajectory Fitting:** Smooth curve reconstruction for immersive AR/VR interactions.  
+- **3D Path Reconstruction:** Inferring continuous motion trajectories from sparse data.  
+- **Generative AI Geometry:** Parametric modeling for realistic, responsive object motion.
 
 ---
 
@@ -108,12 +128,13 @@ This work exemplifies **AI-based mathematical modeling** — essential for tasks
 | `fitted_curve.png` | Visualization of the fitted model. |
 | `FLAM_R&D_Report.pdf` | Written summary report. |
 | `README.md` | This documentation file. |
-| `assets/*.svg` | Rendered equation images for compatibility on GitHub. |
+| `assets/*.svg` | Rendered equation images for GitHub readability. |
 
 ---
 
-## Submitted By:
+## Submitted by:
 
-**Name:** *Sayanrup Barman*      
-**Scholar ID:** 2215060  
-**College:** NIT Silchar 
+**Name:** *Sayanrup Barman*   
+**Scholar ID:** 2215060 
+**College:** NIT Silchar  
+**Date:** November 2025 
