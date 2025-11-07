@@ -58,9 +58,9 @@ Environment: Google Colab
 
 | Parameter | Symbol | Value |
 |------------|---------|--------|
-| Angle | θ | 29.9 deg |
-| Exponential Modulation | M | 0.029 |
-| Horizontal Offset | X | 54.9 |
+| Angle | θ | ≈ 30 deg |
+| Exponential Modulation | M | ≈ 0.03 |
+| Horizontal Offset | X | ≈ 55 |
 | **RMSE** |  | 1.909 × 10⁻⁶ |
 | **R²** |  | 1.00 |
 | **L₁ (mean)** |  | 2.65 × 10⁻⁶ |
@@ -99,9 +99,9 @@ All error metrics (RMSE, R², and L₁) confirm near-perfect reconstruction with
 
 | Parameter | Symbol | Value | Interpretation |
 |------------|---------|--------|----------------|
-| Angle | θ | *≈ 29.9°* | Defines overall curve orientation. |
-| Exponential Modulation | M | *≈ 0.029* | Controls the sinusoidal envelope. |
-| Horizontal Offset | X | *≈ 54.9* | Shifts curve horizontally. |
+| Angle | θ | *≈ 30°* | Defines overall curve orientation. |
+| Exponential Modulation | M | *≈ 0.03* | Controls the sinusoidal envelope. |
+| Horizontal Offset | X | *≈ 55* | Shifts curve horizontally. |
 | Fit Metric | RMSE | *1.909 × 10⁻⁶* | Near-zero error — almost perfect fit. |
 | Correlation | R² | *1.00000* | Explains 100% of variance — complete reconstruction. |
 | Absolute Error | L₁ (mean) | *2.65 × 10⁻⁶* | Mean absolute deviation — confirms geometric fidelity. |
